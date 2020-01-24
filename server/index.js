@@ -24,7 +24,7 @@ app.post('/api/products', ctrl.createProduct);
 // EDIT/UPDATE
 app.put('/api/products/:id', ctrl.updateProduct);
 // DELETE
-app.delete('/api/product/:id', ctrl.deleteProduct);
+app.delete('/api/products/:id', ctrl.deleteProduct);
 
 
 const port = SERVER_PORT;
