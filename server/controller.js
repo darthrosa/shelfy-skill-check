@@ -2,8 +2,8 @@ module.exports = {
     getProduct: (req, res) => {
         const dbInstance = req.app.get('db');
 
-        dbInstance.read_products().then((product) => {
-            res.status(200).send(product)
+        dbInstance.read_products().then((products) => {
+            res.status(200).send(products)
         })
         .catch(err => res.status(500).send(err));
     },

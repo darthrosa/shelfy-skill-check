@@ -2,20 +2,60 @@
 
 .App {
   font-family: Roboto;
-  text-align: center;
 }
 
 header {
-  color: #FFF;
-  background-color: #333333;
-  display: flex;
-  justify-content: left;
-  margin-bottom: 30px;
-  padding: 0px 45px;
-  text-transform: uppercase;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  color: white;
+  background-color: #ab2a19;
 }
 
-.dashboard-container {
+header>img {
+  width: 50px;
+  position: absolute;
+  top: 25px;
+  left: 75px;
+}
+
+header>h1 {
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+button{
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 9px 15px;
+  margin: 0px 6px;
+  background-color: #ED6B5A;
+  border: 2px solid transparent;
+  color: #FFF;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.input-container {
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
+}
+
+.product-img{
+  max-width: 120px;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+
+.product-box{
+  border: 3px black;
 }
