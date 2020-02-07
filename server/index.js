@@ -8,15 +8,16 @@ const express = require('express'),
 
 app.use(cors());
 app.use(express.json());
+const port = SERVER_PORT;
 
 massive(CONNECTION_STRING).then(dbInstance => {
     app.set('db', dbInstance);
     console.log('db connected');
+    app.listen(port, () => console.log(`Server listening on port ${port}.`));
 })
 .catch(err => console.log(err));
 
-// ENDPOINTS BELOW
-
+// ENDPOINTS 
 // READ
 app.get('/api/products', ctrl.getProduct);
 // CREATE
@@ -26,6 +27,3 @@ app.put('/api/products/:id', ctrl.updateProduct);
 // DELETE
 app.delete('/api/products/:id', ctrl.deleteProduct);
 
-
-const port = SERVER_PORT;
-app.listen(port, () => console.log(`Server listening on port ${port}.`));

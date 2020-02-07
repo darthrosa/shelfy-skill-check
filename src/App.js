@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import Dashboard from './components/Dashboard';
 import Header from './components/Header';
 import Form from './components/Form';
 import './App.css';
+import Routes from './Routes';
 
 class App extends Component {
   constructor(props) {
@@ -17,13 +17,16 @@ class App extends Component {
 }
 
 componentDidMount(){
+  console.log('cdm')
     axios.get('/api/products').then(res => {
+      console.log(res.data)
         this.setState({productList: res.data});
     })
     .catch(err => console.log(err));
 }
 
 createProduct(body){
+  console.log(body)
   axios.post('/api/products', body).then(res => {
       this.setState({productList: res.data})
   })
@@ -45,14 +48,15 @@ updateProduct(id, body){
 }
 
   render(){
+    console.log('hit render')
     return (
     <div className="App">
       <Header/>
-      <Dashboard productList={this.state.productList}
+      <Routes   productList={this.state.productList}
                  deleteProduct={this.deleteProduct}
                  updateProduct={this.updateProduct}/>
       <Form createProduct={this.createProduct}/>
-      
+      {/* {routes} */}
     </div>
     )
   };

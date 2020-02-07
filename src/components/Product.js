@@ -22,19 +22,19 @@ class Product extends Component {
         this.setState({priceInput: val});
     }
 
-    editNameInput = (id) => {
-        if(!this.state.toggleView)
-        {
-            this.props.updateProducts(this.props.product.id, {name: this.state.nameInput || this.props.name})
-        }
-    }
-
-    // editPriceInput = (id) => {
+    // editNameInput = (id) => {
     //     if(!this.state.toggleView)
     //     {
-    //         this.props.updateProducts(this.props.product.id, {price: this.state.priceInput || this.props.price})
+    //         this.props.updateProducts(this.props.product.id, {name: this.state.nameInput || this.props.name})
     //     }
     // }
+
+    // // editPriceInput = (id) => {
+    // //     if(!this.state.toggleView)
+    // //     {
+    // //         this.props.updateProducts(this.props.product.id, {price: this.state.priceInput || this.props.price})
+    // //     }
+    // // }
 
 
     render(){

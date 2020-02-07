@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 
 class Form extends Component {
     constructor(props) {
@@ -41,7 +40,7 @@ class Form extends Component {
                         <button
                             onClick={() => this.props.createProduct(
                                 {
-                                    image: this.state.image ? this.state.image :'https://image.shutterstock.com/image-vector/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg',
+                                    image: this.state.image ? this.state.image : 'https://image.shutterstock.com/image-vector/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg',
                                     name: this.state.name,
                                     price: this.state.price
                                 }
